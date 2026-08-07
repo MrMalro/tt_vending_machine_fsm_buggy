@@ -38,7 +38,6 @@ wire nickel  = ui_in[0];
 wire dime    = ui_in[1];
 wire quarter = ui_in[2];
 
-// Tie off unused bidirectional pins (required by Tiny Tapeout)
 assign uio_out = 8'b0;
 assign uio_oe  = 8'b0;
 
@@ -60,7 +59,7 @@ assign uo_out[3:1] = current_state;     // debug, shows what state your in
 assign uo_out[7:4] = 4'b0;      // zeroed out since the pins are unused
 
 
-// state register - update on clock edge
+// state register
 always @(posedge clk or negedge rst_n) begin
     if (!rst_n)
         current_state <= S0;
@@ -137,5 +136,5 @@ always@(*) begin
         end
         endcase
         
-end             // closes out always @(*)
+end
 endmodule
