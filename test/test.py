@@ -31,4 +31,4 @@ async def test_project(dut):
     await ClockCycles(dut.clk, 1)
     assert int(dut.uo_out.value) & 0x01 == 1, "Dispense should fire after quarter"
 
-    dut._log.info("Basic test passed!")
+    dut._log.info("Test #1 passed!")
