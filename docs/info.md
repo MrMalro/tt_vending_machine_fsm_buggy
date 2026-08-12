@@ -21,7 +21,7 @@ First, reset the machine by setting rst_n low then high. This brings the machine
 Once the total reaches 25 cents, the machine will automatically dispense and reset back to 0 cents.
 
 The output LEDs represent the following:
-- uo_out[0] = dispense (lights up when 25 cents is reached)
+- uo_out[0] = dispense (LED lights up when 25 cents is reached)
 - uo_out[1] = debug bit 0 (least sig. bit of current state)
 - uo_out[2] = debug bit 1
 - uo_out[3] = debug bit 2 (most sig. bit of current state)
